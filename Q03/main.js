@@ -7,13 +7,19 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function firstReverse(str) {
-  // YOUR CODE HERE
+  let newArray=str.split("") ;
+  //console.log(newArray)
+  let finalArray=[];
+  for(i=newArray.length-1;i>=0; i--){
+    finalArray.push(newArray[i]);
+    //console.log(newArray);
+  }
+  console.log(finalArray.join(''));
+  return finalArray.join('')
 }
 
-/* 
-Examples:
+
 firstReverse('I Love Code'); // => 'edoC evoL I'
 firstReverse('Hello World'); // => 'dlroW olleH'
 firstReverse('How are you?'); // => '?uoy era woH'
-*/
 
