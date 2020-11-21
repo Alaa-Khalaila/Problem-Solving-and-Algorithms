@@ -7,13 +7,17 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 */
 
 function longestWord(sen) {
-  // YOUR CODE HERE
+  let newArray = sen.split(" ");
+  let word =''
+  for(i=0; i<newArray.length ; i++){
+    if(newArray[i].length > word.length){word= newArray[i]}
+  }
+  console.log(word)
+  return word;
 }
 
-/* 
-Examples:
-longestWord('lol time'); // => 'time'
-longestWord('I love cats'); // => 'love'
-longestWord('coding is awesome'); // => 'awesome'
-longestWord('hello world'); // => 'hello'
-*/
+
+ longestWord('lol time'); // => 'time'
+// longestWord('I love cats'); // => 'love'
+// longestWord('coding is awesome'); // => 'awesome'
+// longestWord('hello world'); // => 'hello'
