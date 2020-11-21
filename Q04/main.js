@@ -14,12 +14,27 @@ If the username is valid then your program should return the string true, otherw
 */
 
 function usernameValidation(str) {
-  // YOUR CODE HERE
+  function checkLetters(str){
+    let strFilter=str.split('')
+    let final =strFilter.filter(e=> typeof e ==='string');
+    console.log(final) 
+    if(final.length===0){
+      return true
+    }
+  }
+  if(str.length>=4 && str.length<=25){
+    if(typeof(str.split('')[0])){
+      if(checkLetters(str)){
+        console.log(true,str)
+      } 
+    }
+  }else{
+    return false;
+  }
 }
 
-/* 
-Examples:
 usernameValidation('aa_'); // => false
+usernameValidation('aaaaa'); // => false
 usernameValidation('u__hello_world123'); // => true
+usernameValidation('u__h^el$lo_world123'); // => false
 
-*/
