@@ -7,16 +7,17 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 */
 
 function longestWord_2(sen) {
-  let newArray = sen.split(" ");
+  let newArray = sen.match(/[a-zA-Z]+/g);
+  //console.log(newArray);
   let word =''
   for(i=0; i<newArray.length ; i++){
-    let cleanWord = newArray[i].replaceAll("[^A-Za-z0-9]","")
-    if(cleanWord.length > word.length){word= cleanWord}
+    if(newArray[i].length > word.length){word= newArray[i]}
   }
   console.log(word)
   return word;
+
 }
-// I don't know why is replaceAll methode is not working....
+
 
 longestWord_2('lol!- time.'); // => 'time'
 longestWord_2('I** love, cats'); // => 'love'
