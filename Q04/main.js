@@ -3,7 +3,8 @@ console.log('Problem Solving Q: 4 ');
 /* Username Validation */
 
 /*  
-Have the function usernameValidation(str) take the str parameter being passed and determine if the string is a valid username according to the following rules:
+Have the function usernameValidation(str) take the str parameter being passed and determine if
+ the string is a valid username according to the following rules:
 
 1. The username is between 4 and 25 characters.
 2. It must start with a letter.
@@ -14,27 +15,30 @@ If the username is valid then your program should return the string true, otherw
 */
 
 function usernameValidation(str) {
-  function checkLetters(str){
-    let strFilter=str.split('')
-    let final =strFilter.filter(e=> typeof e ==='string');
-    console.log(final) 
-    if(final.length===0){
-      return true
-    }
-  }
+  
+  
   if(str.length>=4 && str.length<=25){
-    if(typeof(str.split('')[0])){
-      if(checkLetters(str)){
-        console.log(true,str)
-      } 
-    }
+    //console.log(str[0].match(/[a-zA-Z]/g))
+     if(str[0].match(/[a-zA-Z]/g)){
+       for(i=0 ; i<str.length ; i++){
+         let valid=str[i].match(/[a-zA-z _1-9]/g);
+         if(!valid){
+           return false 
+        }};
+         if(str[str.length-1] !=="_"){
+          console.log(str,true)
+          return true
+      }else{
+        return false}
   }else{
     return false;
   }
+}else{
+  return false
 }
-
+}
 usernameValidation('aa_'); // => false
-usernameValidation('aaaaa'); // => false
+usernameValidation('*aaaa'); // => false
 usernameValidation('u__hello_world123'); // => true
 usernameValidation('u__h^el$lo_world123'); // => false
 
