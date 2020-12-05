@@ -1,3 +1,4 @@
+  
 console.log('Problem Solving Q: 2 ');
 
 /* Longest Word 2 */
@@ -23,4 +24,3 @@ longestWord_2('lol!- time.'); // => 'time'
 longestWord_2('I** love, cats'); // => 'love'
 longestWord_2('coding&& is awesome'); // => 'awesome'
 longestWord_2('hello|| world'); // => 'hello'
-

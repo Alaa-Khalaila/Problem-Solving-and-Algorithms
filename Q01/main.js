@@ -17,7 +17,7 @@ function longestWord(sen) {
 }
 
 
- longestWord('lol time'); // => 'time'
-// longestWord('I love cats'); // => 'love'
-// longestWord('coding is awesome'); // => 'awesome'
-// longestWord('hello world'); // => 'hello'
+longestWord('lol time'); // => 'time'
+longestWord('I love cats'); // => 'love'
+longestWord('coding is awesome'); // => 'awesome'
+longestWord('hello world'); // => 'hello'
