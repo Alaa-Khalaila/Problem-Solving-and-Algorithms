@@ -6,13 +6,12 @@ console.log('Problem Solving Q: 25');
 Write a JavaScript function to check whether an `input` is an array or not.
 */
 
-function is_array() {
-  // YOUR CODE HERE
+function is_array(arr) {
+  return typeof(arr)=== 'object'
 }
 
-/* 
-Examples:
-is_array('w3resource') => false
-is_array ([1, 2, 4, 0]) // => true
 
-*/
+res1 =is_array('w3resource') //=> false
+res2= is_array ([1, 2, 4, 0]) // => true
+
+console.log(res1,res2)
